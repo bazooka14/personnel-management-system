@@ -21,8 +21,8 @@ public class ArrayBasedPersonRepository implements PersonRepository {
     }
 
     @Override
-    public void add(Person[] people) {
-        this.storage.addAll(Arrays.asList(people));
+    public void add(Person[] persons) {
+        this.storage.addAll(Arrays.asList(persons));
     }
 
     @Override
