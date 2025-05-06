@@ -1,3 +1,5 @@
+package model;
+
 public class Instructor extends Person {
     private String subject;
 
@@ -15,5 +17,10 @@ public class Instructor extends Person {
             throw new IllegalArgumentException("Предмет не может быть пустым или null");
         }
         this.subject = subject;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, ведет предмет %s", super.toString(), subject);
     }
 }

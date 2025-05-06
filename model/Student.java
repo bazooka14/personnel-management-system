@@ -1,3 +1,5 @@
+package model;
+
 public class Student extends Person{
     private String schoolName;
 
@@ -15,6 +17,11 @@ public class Student extends Person{
             throw new IllegalArgumentException("Название школы не может быть пустым или null");
         }
         this.schoolName = schoolName;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, учится в школе %s", super.toString(), schoolName);
     }
 }
 

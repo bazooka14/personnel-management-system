@@ -1,3 +1,5 @@
+package model;
+
 public class Staff extends Person {
     private int salary;
 
@@ -15,5 +17,10 @@ public class Staff extends Person {
             throw new IllegalArgumentException("Зарплата должна быть положительным числом");
         }
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, зарплата %d руб.", super.toString(), salary);
     }
 }

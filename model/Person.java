@@ -1,6 +1,8 @@
+package model;
+
 public abstract class Person {
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
 
     public Person(String name, int age) {
         setName(name);
@@ -27,5 +29,10 @@ public abstract class Person {
             throw new IllegalArgumentException("Возраст должен быть в диапазоне от 0 до 150");
         }
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %d лет", name, age);
     }
 }
